@@ -1,4 +1,5 @@
 # no major modifications
+# authors = ["Qi Zhang <singularitti@outlook.com>"]
 
 module Tokenize
 
@@ -104,6 +105,10 @@ function lex(tk::Tokenizer, line)
     end  # while loop
     return tokens
 end  # function lex
+
+
+lex(line) = lex(Tokenizer(), line)
+
 
 """
     lex_name(tk::Tokenizer, line)
